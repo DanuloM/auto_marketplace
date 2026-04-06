@@ -59,6 +59,7 @@ class Car(models.Model):
     description = models.TextField(null=True, blank=True)
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    location = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
         return f"{self.generation} - {self.body_type}"

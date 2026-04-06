@@ -71,7 +71,7 @@ class CarSerializer(serializers.ModelSerializer):
     images = CarImageSerializer(many=True, read_only=True)
     class Meta:
         model = Car
-        fields = ['id', 'model', 'model_id', 'generation', 'generation_id', 'body_type', 'color', 'vin', 'owner_count', 'seller', 'price', 'price_history','mileage', 'year', 'description', 'images', 'is_active', 'created_at']
+        fields = ['id', 'model', 'model_id', 'generation', 'generation_id', 'body_type', 'color', 'vin', 'owner_count', 'seller', 'price', 'price_history','mileage', 'year', 'description', 'images', 'location','is_active', 'created_at']
         read_only_fields = ['id', 'seller', 'created_at']
 
 

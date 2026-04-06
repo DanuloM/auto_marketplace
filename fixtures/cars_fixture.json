@@ -1,45 +1,3239 @@
 [
-  {"model": "cars.manufacturer", "pk": 1, "fields": {"name": "BMW"}},
-  {"model": "cars.manufacturer", "pk": 2, "fields": {"name": "Mercedes-Benz"}},
-  {"model": "cars.manufacturer", "pk": 3, "fields": {"name": "Audi"}},
-  {"model": "cars.manufacturer", "pk": 4, "fields": {"name": "Volkswagen"}},
-  {"model": "cars.manufacturer", "pk": 5, "fields": {"name": "Toyota"}},
-  {"model": "cars.manufacturer", "pk": 6, "fields": {"name": "Honda"}},
-
-  {"model": "cars.model", "pk": 1, "fields": {"name": "3 Series", "manufacturer": 1}},
-  {"model": "cars.model", "pk": 2, "fields": {"name": "5 Series", "manufacturer": 1}},
-  {"model": "cars.model", "pk": 3, "fields": {"name": "X5", "manufacturer": 1}},
-  {"model": "cars.model", "pk": 4, "fields": {"name": "C-Class", "manufacturer": 2}},
-  {"model": "cars.model", "pk": 5, "fields": {"name": "E-Class", "manufacturer": 2}},
-  {"model": "cars.model", "pk": 6, "fields": {"name": "GLE", "manufacturer": 2}},
-  {"model": "cars.model", "pk": 7, "fields": {"name": "A4", "manufacturer": 3}},
-  {"model": "cars.model", "pk": 8, "fields": {"name": "A6", "manufacturer": 3}},
-  {"model": "cars.model", "pk": 9, "fields": {"name": "Q5", "manufacturer": 3}},
-  {"model": "cars.model", "pk": 10, "fields": {"name": "Golf", "manufacturer": 4}},
-  {"model": "cars.model", "pk": 11, "fields": {"name": "Passat", "manufacturer": 4}},
-  {"model": "cars.model", "pk": 12, "fields": {"name": "Tiguan", "manufacturer": 4}},
-  {"model": "cars.model", "pk": 13, "fields": {"name": "Camry", "manufacturer": 5}},
-  {"model": "cars.model", "pk": 14, "fields": {"name": "RAV4", "manufacturer": 5}},
-  {"model": "cars.model", "pk": 15, "fields": {"name": "Civic", "manufacturer": 6}},
-
-  {"model": "cars.generation", "pk": 1,  "fields": {"name": "F30", "year_start": 2012, "year_end": 2018, "model": 1}},
-  {"model": "cars.generation", "pk": 2,  "fields": {"name": "G20", "year_start": 2019, "year_end": null, "model": 1}},
-  {"model": "cars.generation", "pk": 3,  "fields": {"name": "F10", "year_start": 2010, "year_end": 2017, "model": 2}},
-  {"model": "cars.generation", "pk": 4,  "fields": {"name": "G30", "year_start": 2017, "year_end": null, "model": 2}},
-  {"model": "cars.generation", "pk": 5,  "fields": {"name": "F15", "year_start": 2014, "year_end": 2018, "model": 3}},
-  {"model": "cars.generation", "pk": 6,  "fields": {"name": "G05", "year_start": 2019, "year_end": null, "model": 3}},
-  {"model": "cars.generation", "pk": 7,  "fields": {"name": "W205", "year_start": 2014, "year_end": 2021, "model": 4}},
-  {"model": "cars.generation", "pk": 8,  "fields": {"name": "W206", "year_start": 2021, "year_end": null, "model": 4}},
-  {"model": "cars.generation", "pk": 9,  "fields": {"name": "W213", "year_start": 2016, "year_end": null, "model": 5}},
-  {"model": "cars.generation", "pk": 10, "fields": {"name": "W167", "year_start": 2019, "year_end": null, "model": 6}},
-  {"model": "cars.generation", "pk": 11, "fields": {"name": "B9", "year_start": 2016, "year_end": null, "model": 7}},
-  {"model": "cars.generation", "pk": 12, "fields": {"name": "C8", "year_start": 2018, "year_end": null, "model": 8}},
-  {"model": "cars.generation", "pk": 13, "fields": {"name": "FY", "year_start": 2017, "year_end": null, "model": 9}},
-  {"model": "cars.generation", "pk": 14, "fields": {"name": "Mk8", "year_start": 2020, "year_end": null, "model": 10}},
-  {"model": "cars.generation", "pk": 15, "fields": {"name": "Mk7", "year_start": 2013, "year_end": 2020, "model": 10}},
-  {"model": "cars.generation", "pk": 16, "fields": {"name": "B8", "year_start": 2015, "year_end": null, "model": 11}},
-  {"model": "cars.generation", "pk": 17, "fields": {"name": "AD1", "year_start": 2016, "year_end": null, "model": 12}},
-  {"model": "cars.generation", "pk": 18, "fields": {"name": "XV70", "year_start": 2018, "year_end": null, "model": 13}},
-  {"model": "cars.generation", "pk": 19, "fields": {"name": "XA50", "year_start": 2019, "year_end": null, "model": 14}},
-  {"model": "cars.generation", "pk": 20, "fields": {"name": "FC1", "year_start": 2022, "year_end": null, "model": 15}}
+  {
+    "model": "cars.manufacturer",
+    "pk": 1,
+    "fields": {
+      "name": "BMW"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 2,
+    "fields": {
+      "name": "Mercedes-Benz"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 3,
+    "fields": {
+      "name": "Audi"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 4,
+    "fields": {
+      "name": "Volkswagen"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 5,
+    "fields": {
+      "name": "Toyota"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 6,
+    "fields": {
+      "name": "Honda"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 7,
+    "fields": {
+      "name": "Ford"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 8,
+    "fields": {
+      "name": "Porsche"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 9,
+    "fields": {
+      "name": "Lexus"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 10,
+    "fields": {
+      "name": "Subaru"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 11,
+    "fields": {
+      "name": "Mazda"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 12,
+    "fields": {
+      "name": "Hyundai"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 13,
+    "fields": {
+      "name": "Kia"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 14,
+    "fields": {
+      "name": "Nissan"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 15,
+    "fields": {
+      "name": "Chevrolet"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 16,
+    "fields": {
+      "name": "Volvo"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 17,
+    "fields": {
+      "name": "Skoda"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 18,
+    "fields": {
+      "name": "Seat"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 19,
+    "fields": {
+      "name": "Jeep"
+    }
+  },
+  {
+    "model": "cars.manufacturer",
+    "pk": 20,
+    "fields": {
+      "name": "Land Rover"
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 1,
+    "fields": {
+      "name": "3 Series",
+      "manufacturer": 1
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 2,
+    "fields": {
+      "name": "5 Series",
+      "manufacturer": 1
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 3,
+    "fields": {
+      "name": "7 Series",
+      "manufacturer": 1
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 4,
+    "fields": {
+      "name": "X3",
+      "manufacturer": 1
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 5,
+    "fields": {
+      "name": "X5",
+      "manufacturer": 1
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 6,
+    "fields": {
+      "name": "X6",
+      "manufacturer": 1
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 7,
+    "fields": {
+      "name": "M2",
+      "manufacturer": 1
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 8,
+    "fields": {
+      "name": "M3",
+      "manufacturer": 1
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 9,
+    "fields": {
+      "name": "M4",
+      "manufacturer": 1
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 10,
+    "fields": {
+      "name": "M5",
+      "manufacturer": 1
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 11,
+    "fields": {
+      "name": "M8",
+      "manufacturer": 1
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 12,
+    "fields": {
+      "name": "i4",
+      "manufacturer": 1
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 13,
+    "fields": {
+      "name": "C-Class",
+      "manufacturer": 2
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 14,
+    "fields": {
+      "name": "E-Class",
+      "manufacturer": 2
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 15,
+    "fields": {
+      "name": "S-Class",
+      "manufacturer": 2
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 16,
+    "fields": {
+      "name": "GLC",
+      "manufacturer": 2
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 17,
+    "fields": {
+      "name": "GLE",
+      "manufacturer": 2
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 18,
+    "fields": {
+      "name": "AMG GT",
+      "manufacturer": 2
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 19,
+    "fields": {
+      "name": "A-Class",
+      "manufacturer": 2
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 20,
+    "fields": {
+      "name": "CLA",
+      "manufacturer": 2
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 21,
+    "fields": {
+      "name": "A3",
+      "manufacturer": 3
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 22,
+    "fields": {
+      "name": "A4",
+      "manufacturer": 3
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 23,
+    "fields": {
+      "name": "A6",
+      "manufacturer": 3
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 24,
+    "fields": {
+      "name": "A8",
+      "manufacturer": 3
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 25,
+    "fields": {
+      "name": "Q3",
+      "manufacturer": 3
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 26,
+    "fields": {
+      "name": "Q5",
+      "manufacturer": 3
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 27,
+    "fields": {
+      "name": "Q7",
+      "manufacturer": 3
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 28,
+    "fields": {
+      "name": "RS6",
+      "manufacturer": 3
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 29,
+    "fields": {
+      "name": "RS3",
+      "manufacturer": 3
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 30,
+    "fields": {
+      "name": "TT",
+      "manufacturer": 3
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 31,
+    "fields": {
+      "name": "Golf",
+      "manufacturer": 4
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 32,
+    "fields": {
+      "name": "Passat",
+      "manufacturer": 4
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 33,
+    "fields": {
+      "name": "Tiguan",
+      "manufacturer": 4
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 34,
+    "fields": {
+      "name": "Polo",
+      "manufacturer": 4
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 35,
+    "fields": {
+      "name": "Arteon",
+      "manufacturer": 4
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 36,
+    "fields": {
+      "name": "Touareg",
+      "manufacturer": 4
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 37,
+    "fields": {
+      "name": "Camry",
+      "manufacturer": 5
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 38,
+    "fields": {
+      "name": "RAV4",
+      "manufacturer": 5
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 39,
+    "fields": {
+      "name": "Land Cruiser",
+      "manufacturer": 5
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 40,
+    "fields": {
+      "name": "Corolla",
+      "manufacturer": 5
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 41,
+    "fields": {
+      "name": "Supra",
+      "manufacturer": 5
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 42,
+    "fields": {
+      "name": "Highlander",
+      "manufacturer": 5
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 43,
+    "fields": {
+      "name": "Civic",
+      "manufacturer": 6
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 44,
+    "fields": {
+      "name": "Accord",
+      "manufacturer": 6
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 45,
+    "fields": {
+      "name": "CR-V",
+      "manufacturer": 6
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 46,
+    "fields": {
+      "name": "HR-V",
+      "manufacturer": 6
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 47,
+    "fields": {
+      "name": "Focus",
+      "manufacturer": 7
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 48,
+    "fields": {
+      "name": "Mustang",
+      "manufacturer": 7
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 49,
+    "fields": {
+      "name": "Explorer",
+      "manufacturer": 7
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 50,
+    "fields": {
+      "name": "F-150",
+      "manufacturer": 7
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 51,
+    "fields": {
+      "name": "911",
+      "manufacturer": 8
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 52,
+    "fields": {
+      "name": "Cayenne",
+      "manufacturer": 8
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 53,
+    "fields": {
+      "name": "Panamera",
+      "manufacturer": 8
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 54,
+    "fields": {
+      "name": "Macan",
+      "manufacturer": 8
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 55,
+    "fields": {
+      "name": "Taycan",
+      "manufacturer": 8
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 56,
+    "fields": {
+      "name": "IS",
+      "manufacturer": 9
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 57,
+    "fields": {
+      "name": "ES",
+      "manufacturer": 9
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 58,
+    "fields": {
+      "name": "RX",
+      "manufacturer": 9
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 59,
+    "fields": {
+      "name": "GS",
+      "manufacturer": 9
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 60,
+    "fields": {
+      "name": "Impreza",
+      "manufacturer": 10
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 61,
+    "fields": {
+      "name": "Forester",
+      "manufacturer": 10
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 62,
+    "fields": {
+      "name": "Outback",
+      "manufacturer": 10
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 63,
+    "fields": {
+      "name": "WRX STI",
+      "manufacturer": 10
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 64,
+    "fields": {
+      "name": "Mazda3",
+      "manufacturer": 11
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 65,
+    "fields": {
+      "name": "Mazda6",
+      "manufacturer": 11
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 66,
+    "fields": {
+      "name": "CX-5",
+      "manufacturer": 11
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 67,
+    "fields": {
+      "name": "MX-5",
+      "manufacturer": 11
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 68,
+    "fields": {
+      "name": "Elantra",
+      "manufacturer": 12
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 69,
+    "fields": {
+      "name": "Tucson",
+      "manufacturer": 12
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 70,
+    "fields": {
+      "name": "Santa Fe",
+      "manufacturer": 12
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 71,
+    "fields": {
+      "name": "i30",
+      "manufacturer": 12
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 72,
+    "fields": {
+      "name": "Cerato",
+      "manufacturer": 13
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 73,
+    "fields": {
+      "name": "Sportage",
+      "manufacturer": 13
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 74,
+    "fields": {
+      "name": "Sorento",
+      "manufacturer": 13
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 75,
+    "fields": {
+      "name": "Stinger",
+      "manufacturer": 13
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 76,
+    "fields": {
+      "name": "Qashqai",
+      "manufacturer": 14
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 77,
+    "fields": {
+      "name": "X-Trail",
+      "manufacturer": 14
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 78,
+    "fields": {
+      "name": "GT-R",
+      "manufacturer": 14
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 79,
+    "fields": {
+      "name": "Camaro",
+      "manufacturer": 15
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 80,
+    "fields": {
+      "name": "Corvette",
+      "manufacturer": 15
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 81,
+    "fields": {
+      "name": "XC60",
+      "manufacturer": 16
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 82,
+    "fields": {
+      "name": "XC90",
+      "manufacturer": 16
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 83,
+    "fields": {
+      "name": "S60",
+      "manufacturer": 16
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 84,
+    "fields": {
+      "name": "Octavia",
+      "manufacturer": 17
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 85,
+    "fields": {
+      "name": "Superb",
+      "manufacturer": 17
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 86,
+    "fields": {
+      "name": "Kodiaq",
+      "manufacturer": 17
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 87,
+    "fields": {
+      "name": "Wrangler",
+      "manufacturer": 19
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 88,
+    "fields": {
+      "name": "Grand Cherokee",
+      "manufacturer": 19
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 89,
+    "fields": {
+      "name": "Defender",
+      "manufacturer": 20
+    }
+  },
+  {
+    "model": "cars.model",
+    "pk": 90,
+    "fields": {
+      "name": "Range Rover",
+      "manufacturer": 20
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 1,
+    "fields": {
+      "name": "F30",
+      "year_start": 2012,
+      "year_end": 2018,
+      "model": 1
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 2,
+    "fields": {
+      "name": "G20",
+      "year_start": 2019,
+      "year_end": null,
+      "model": 1
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 3,
+    "fields": {
+      "name": "F10",
+      "year_start": 2010,
+      "year_end": 2017,
+      "model": 2
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 4,
+    "fields": {
+      "name": "G30",
+      "year_start": 2017,
+      "year_end": null,
+      "model": 2
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 5,
+    "fields": {
+      "name": "F01",
+      "year_start": 2009,
+      "year_end": 2015,
+      "model": 3
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 6,
+    "fields": {
+      "name": "G11",
+      "year_start": 2016,
+      "year_end": null,
+      "model": 3
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 7,
+    "fields": {
+      "name": "F25",
+      "year_start": 2011,
+      "year_end": 2017,
+      "model": 4
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 8,
+    "fields": {
+      "name": "G01",
+      "year_start": 2018,
+      "year_end": null,
+      "model": 4
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 9,
+    "fields": {
+      "name": "F15",
+      "year_start": 2014,
+      "year_end": 2018,
+      "model": 5
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 10,
+    "fields": {
+      "name": "G05",
+      "year_start": 2019,
+      "year_end": null,
+      "model": 5
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 11,
+    "fields": {
+      "name": "F16",
+      "year_start": 2015,
+      "year_end": 2019,
+      "model": 6
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 12,
+    "fields": {
+      "name": "G06",
+      "year_start": 2020,
+      "year_end": null,
+      "model": 6
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 13,
+    "fields": {
+      "name": "F87",
+      "year_start": 2016,
+      "year_end": 2021,
+      "model": 7
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 14,
+    "fields": {
+      "name": "G87",
+      "year_start": 2022,
+      "year_end": null,
+      "model": 7
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 15,
+    "fields": {
+      "name": "F80",
+      "year_start": 2014,
+      "year_end": 2018,
+      "model": 8
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 16,
+    "fields": {
+      "name": "G80",
+      "year_start": 2021,
+      "year_end": null,
+      "model": 8
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 17,
+    "fields": {
+      "name": "F82",
+      "year_start": 2014,
+      "year_end": 2020,
+      "model": 9
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 18,
+    "fields": {
+      "name": "G82",
+      "year_start": 2021,
+      "year_end": null,
+      "model": 9
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 19,
+    "fields": {
+      "name": "F90",
+      "year_start": 2018,
+      "year_end": 2023,
+      "model": 10
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 20,
+    "fields": {
+      "name": "G90",
+      "year_start": 2024,
+      "year_end": null,
+      "model": 10
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 21,
+    "fields": {
+      "name": "F92",
+      "year_start": 2019,
+      "year_end": null,
+      "model": 11
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 22,
+    "fields": {
+      "name": "G26",
+      "year_start": 2022,
+      "year_end": null,
+      "model": 12
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 23,
+    "fields": {
+      "name": "W205",
+      "year_start": 2014,
+      "year_end": 2021,
+      "model": 13
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 24,
+    "fields": {
+      "name": "W206",
+      "year_start": 2022,
+      "year_end": null,
+      "model": 13
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 25,
+    "fields": {
+      "name": "W213",
+      "year_start": 2016,
+      "year_end": 2023,
+      "model": 14
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 26,
+    "fields": {
+      "name": "W214",
+      "year_start": 2024,
+      "year_end": null,
+      "model": 14
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 27,
+    "fields": {
+      "name": "W222",
+      "year_start": 2013,
+      "year_end": 2020,
+      "model": 15
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 28,
+    "fields": {
+      "name": "W223",
+      "year_start": 2021,
+      "year_end": null,
+      "model": 15
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 29,
+    "fields": {
+      "name": "X253",
+      "year_start": 2015,
+      "year_end": 2022,
+      "model": 16
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 30,
+    "fields": {
+      "name": "X254",
+      "year_start": 2023,
+      "year_end": null,
+      "model": 16
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 31,
+    "fields": {
+      "name": "W166",
+      "year_start": 2015,
+      "year_end": 2019,
+      "model": 17
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 32,
+    "fields": {
+      "name": "W167",
+      "year_start": 2020,
+      "year_end": null,
+      "model": 17
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 33,
+    "fields": {
+      "name": "C190",
+      "year_start": 2015,
+      "year_end": null,
+      "model": 18
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 34,
+    "fields": {
+      "name": "W177",
+      "year_start": 2018,
+      "year_end": null,
+      "model": 19
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 35,
+    "fields": {
+      "name": "C118",
+      "year_start": 2019,
+      "year_end": null,
+      "model": 20
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 36,
+    "fields": {
+      "name": "8V",
+      "year_start": 2013,
+      "year_end": 2020,
+      "model": 21
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 37,
+    "fields": {
+      "name": "8Y",
+      "year_start": 2021,
+      "year_end": null,
+      "model": 21
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 38,
+    "fields": {
+      "name": "B9",
+      "year_start": 2016,
+      "year_end": null,
+      "model": 22
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 39,
+    "fields": {
+      "name": "C8",
+      "year_start": 2018,
+      "year_end": null,
+      "model": 23
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 40,
+    "fields": {
+      "name": "D5",
+      "year_start": 2018,
+      "year_end": null,
+      "model": 24
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 41,
+    "fields": {
+      "name": "F3",
+      "year_start": 2019,
+      "year_end": null,
+      "model": 25
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 42,
+    "fields": {
+      "name": "FY",
+      "year_start": 2017,
+      "year_end": null,
+      "model": 26
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 43,
+    "fields": {
+      "name": "4M",
+      "year_start": 2016,
+      "year_end": null,
+      "model": 27
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 44,
+    "fields": {
+      "name": "C8 RS6",
+      "year_start": 2020,
+      "year_end": null,
+      "model": 28
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 45,
+    "fields": {
+      "name": "8Y RS3",
+      "year_start": 2022,
+      "year_end": null,
+      "model": 29
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 46,
+    "fields": {
+      "name": "8S",
+      "year_start": 2015,
+      "year_end": null,
+      "model": 30
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 47,
+    "fields": {
+      "name": "Mk7",
+      "year_start": 2013,
+      "year_end": 2020,
+      "model": 31
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 48,
+    "fields": {
+      "name": "Mk8",
+      "year_start": 2021,
+      "year_end": null,
+      "model": 31
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 49,
+    "fields": {
+      "name": "B8",
+      "year_start": 2015,
+      "year_end": null,
+      "model": 32
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 50,
+    "fields": {
+      "name": "AD1",
+      "year_start": 2017,
+      "year_end": null,
+      "model": 33
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 51,
+    "fields": {
+      "name": "AW",
+      "year_start": 2018,
+      "year_end": null,
+      "model": 34
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 52,
+    "fields": {
+      "name": "3H",
+      "year_start": 2017,
+      "year_end": null,
+      "model": 35
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 53,
+    "fields": {
+      "name": "CR",
+      "year_start": 2018,
+      "year_end": null,
+      "model": 36
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 54,
+    "fields": {
+      "name": "XV70",
+      "year_start": 2018,
+      "year_end": null,
+      "model": 37
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 55,
+    "fields": {
+      "name": "XA50",
+      "year_start": 2019,
+      "year_end": null,
+      "model": 38
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 56,
+    "fields": {
+      "name": "J300",
+      "year_start": 2022,
+      "year_end": null,
+      "model": 39
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 57,
+    "fields": {
+      "name": "J200",
+      "year_start": 2008,
+      "year_end": 2021,
+      "model": 39
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 58,
+    "fields": {
+      "name": "E210",
+      "year_start": 2019,
+      "year_end": null,
+      "model": 40
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 59,
+    "fields": {
+      "name": "A90",
+      "year_start": 2019,
+      "year_end": null,
+      "model": 41
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 60,
+    "fields": {
+      "name": "XU70",
+      "year_start": 2020,
+      "year_end": null,
+      "model": 42
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 61,
+    "fields": {
+      "name": "FC",
+      "year_start": 2016,
+      "year_end": 2021,
+      "model": 43
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 62,
+    "fields": {
+      "name": "FE",
+      "year_start": 2022,
+      "year_end": null,
+      "model": 43
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 63,
+    "fields": {
+      "name": "CV",
+      "year_start": 2018,
+      "year_end": null,
+      "model": 44
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 64,
+    "fields": {
+      "name": "RW",
+      "year_start": 2017,
+      "year_end": null,
+      "model": 45
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 65,
+    "fields": {
+      "name": "RU",
+      "year_start": 2014,
+      "year_end": 2021,
+      "model": 46
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 66,
+    "fields": {
+      "name": "Mk4",
+      "year_start": 2019,
+      "year_end": null,
+      "model": 47
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 67,
+    "fields": {
+      "name": "S550",
+      "year_start": 2015,
+      "year_end": 2023,
+      "model": 48
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 68,
+    "fields": {
+      "name": "S650",
+      "year_start": 2024,
+      "year_end": null,
+      "model": 48
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 69,
+    "fields": {
+      "name": "U625",
+      "year_start": 2020,
+      "year_end": null,
+      "model": 49
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 70,
+    "fields": {
+      "name": "P702",
+      "year_start": 2021,
+      "year_end": null,
+      "model": 50
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 71,
+    "fields": {
+      "name": "992",
+      "year_start": 2019,
+      "year_end": null,
+      "model": 51
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 72,
+    "fields": {
+      "name": "991",
+      "year_start": 2012,
+      "year_end": 2019,
+      "model": 51
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 73,
+    "fields": {
+      "name": "9YA",
+      "year_start": 2018,
+      "year_end": null,
+      "model": 52
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 74,
+    "fields": {
+      "name": "971",
+      "year_start": 2017,
+      "year_end": null,
+      "model": 53
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 75,
+    "fields": {
+      "name": "95B",
+      "year_start": 2014,
+      "year_end": null,
+      "model": 54
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 76,
+    "fields": {
+      "name": "Y1A",
+      "year_start": 2020,
+      "year_end": null,
+      "model": 55
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 77,
+    "fields": {
+      "name": "XE30",
+      "year_start": 2014,
+      "year_end": null,
+      "model": 56
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 78,
+    "fields": {
+      "name": "XV70",
+      "year_start": 2019,
+      "year_end": null,
+      "model": 57
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 79,
+    "fields": {
+      "name": "AL20",
+      "year_start": 2016,
+      "year_end": null,
+      "model": 58
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 80,
+    "fields": {
+      "name": "VA",
+      "year_start": 2014,
+      "year_end": 2021,
+      "model": 63
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 81,
+    "fields": {
+      "name": "ND",
+      "year_start": 2015,
+      "year_end": null,
+      "model": 67
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 82,
+    "fields": {
+      "name": "CK",
+      "year_start": 2018,
+      "year_end": null,
+      "model": 75
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 83,
+    "fields": {
+      "name": "R35",
+      "year_start": 2007,
+      "year_end": null,
+      "model": 78
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 84,
+    "fields": {
+      "name": "6th",
+      "year_start": 2016,
+      "year_end": null,
+      "model": 79
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 85,
+    "fields": {
+      "name": "C8",
+      "year_start": 2020,
+      "year_end": null,
+      "model": 80
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 86,
+    "fields": {
+      "name": "U",
+      "year_start": 2018,
+      "year_end": null,
+      "model": 81
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 87,
+    "fields": {
+      "name": "L",
+      "year_start": 2015,
+      "year_end": null,
+      "model": 82
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 88,
+    "fields": {
+      "name": "4th",
+      "year_start": 2020,
+      "year_end": null,
+      "model": 84
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 89,
+    "fields": {
+      "name": "3rd",
+      "year_start": 2015,
+      "year_end": null,
+      "model": 85
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 90,
+    "fields": {
+      "name": "JL",
+      "year_start": 2018,
+      "year_end": null,
+      "model": 87
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 91,
+    "fields": {
+      "name": "L460",
+      "year_start": 2022,
+      "year_end": null,
+      "model": 90
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 92,
+    "fields": {
+      "name": "L663",
+      "year_start": 2020,
+      "year_end": null,
+      "model": 89
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 1,
+    "fields": {
+      "model": 10,
+      "generation": 19,
+      "body_type": "Sedan",
+      "color": "Black",
+      "vin": "WBS83CH0XM1234501",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "89000.00",
+      "mileage": 75000,
+      "year": 2020,
+      "description": "M5 Competition, carbon package, full options",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 2,
+    "fields": {
+      "model": 10,
+      "generation": 19,
+      "body_type": "Sedan",
+      "color": "White",
+      "vin": "WBS83CH0XM1234502",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "95000.00",
+      "mileage": 42000,
+      "year": 2021,
+      "description": "M5 Competition xDrive, B&W sound",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 3,
+    "fields": {
+      "model": 10,
+      "generation": 20,
+      "body_type": "Sedan",
+      "color": "Blue",
+      "vin": "WBS83CH0XM1234503",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "125000.00",
+      "mileage": 8000,
+      "year": 2024,
+      "description": "M5 G90 новий, hybrid",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 4,
+    "fields": {
+      "model": 8,
+      "generation": 16,
+      "body_type": "Sedan",
+      "color": "Red",
+      "vin": "WBS83CH0XM1234504",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "78000.00",
+      "mileage": 22000,
+      "year": 2022,
+      "description": "M3 Competition, manual gearbox",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 5,
+    "fields": {
+      "model": 8,
+      "generation": 16,
+      "body_type": "Sedan",
+      "color": "Gray",
+      "vin": "WBS83CH0XM1234505",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "82000.00",
+      "mileage": 15000,
+      "year": 2023,
+      "description": "M3 xDrive, full carbon interior",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 6,
+    "fields": {
+      "model": 9,
+      "generation": 18,
+      "body_type": "Coupe",
+      "color": "Orange",
+      "vin": "WBS83CH0XM1234506",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "85000.00",
+      "mileage": 18000,
+      "year": 2022,
+      "description": "M4 Competition coupe",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 7,
+    "fields": {
+      "model": 9,
+      "generation": 17,
+      "body_type": "Coupe",
+      "color": "Black",
+      "vin": "WBS83CH0XM1234507",
+      "owner_count": 3,
+      "seller": 1,
+      "price": "48000.00",
+      "mileage": 67000,
+      "year": 2017,
+      "description": "M4 F82, HRE wheels",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 8,
+    "fields": {
+      "model": 7,
+      "generation": 14,
+      "body_type": "Coupe",
+      "color": "Yellow",
+      "vin": "WBS83CH0XM1234508",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "72000.00",
+      "mileage": 5000,
+      "year": 2023,
+      "description": "M2 G87, manual 6-speed",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 9,
+    "fields": {
+      "model": 7,
+      "generation": 13,
+      "body_type": "Coupe",
+      "color": "Black",
+      "vin": "WBS83CH0XM1234509",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "45000.00",
+      "mileage": 55000,
+      "year": 2018,
+      "description": "M2 Competition F87",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 10,
+    "fields": {
+      "model": 11,
+      "generation": 21,
+      "body_type": "Coupe",
+      "color": "White",
+      "vin": "WBS83CH0XM1234510",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "105000.00",
+      "mileage": 30000,
+      "year": 2021,
+      "description": "M8 Competition coupe, ceramic brakes",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 11,
+    "fields": {
+      "model": 1,
+      "generation": 2,
+      "body_type": "Sedan",
+      "color": "Blue",
+      "vin": "WBA8E1C5XGA123411",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "38000.00",
+      "mileage": 48000,
+      "year": 2021,
+      "description": "330i xDrive M Sport",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 12,
+    "fields": {
+      "model": 1,
+      "generation": 1,
+      "body_type": "Sedan",
+      "color": "Silver",
+      "vin": "WBA8E1C5XGA123412",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "22000.00",
+      "mileage": 98000,
+      "year": 2016,
+      "description": "320d, дизель, сервісна книжка",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 13,
+    "fields": {
+      "model": 2,
+      "generation": 4,
+      "body_type": "Sedan",
+      "color": "Black",
+      "vin": "WBA8E1C5XGA123413",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "55000.00",
+      "mileage": 35000,
+      "year": 2020,
+      "description": "540i xDrive M Sport",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 14,
+    "fields": {
+      "model": 2,
+      "generation": 3,
+      "body_type": "Sedan",
+      "color": "Gray",
+      "vin": "WBA8E1C5XGA123414",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "28000.00",
+      "mileage": 120000,
+      "year": 2015,
+      "description": "520d, 1 власник",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 15,
+    "fields": {
+      "model": 5,
+      "generation": 10,
+      "body_type": "SUV",
+      "color": "Black",
+      "vin": "WBA8E1C5XGA123415",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "72000.00",
+      "mileage": 28000,
+      "year": 2022,
+      "description": "X5 M50i, panorama, HUD",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 16,
+    "fields": {
+      "model": 5,
+      "generation": 9,
+      "body_type": "SUV",
+      "color": "White",
+      "vin": "WBA8E1C5XGA123416",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "42000.00",
+      "mileage": 85000,
+      "year": 2017,
+      "description": "X5 35d, 7 місць",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 17,
+    "fields": {
+      "model": 6,
+      "generation": 12,
+      "body_type": "SUV",
+      "color": "Black",
+      "vin": "WBA8E1C5XGA123417",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "78000.00",
+      "mileage": 22000,
+      "year": 2022,
+      "description": "X6 M50i",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 18,
+    "fields": {
+      "model": 12,
+      "generation": 22,
+      "body_type": "Sedan",
+      "color": "Blue",
+      "vin": "WBA8E1C5XGA123418",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "65000.00",
+      "mileage": 12000,
+      "year": 2023,
+      "description": "i4 M50, електро, 544hp",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 19,
+    "fields": {
+      "model": 18,
+      "generation": 33,
+      "body_type": "Coupe",
+      "color": "Red",
+      "vin": "WDDYJ7JA0GA123419",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "115000.00",
+      "mileage": 18000,
+      "year": 2021,
+      "description": "AMG GT 63S, 4-door",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 20,
+    "fields": {
+      "model": 18,
+      "generation": 33,
+      "body_type": "Coupe",
+      "color": "Black",
+      "vin": "WDDYJ7JA0GA123420",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "98000.00",
+      "mileage": 35000,
+      "year": 2019,
+      "description": "AMG GT R, track package",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 21,
+    "fields": {
+      "model": 15,
+      "generation": 28,
+      "body_type": "Sedan",
+      "color": "Black",
+      "vin": "WDDUG8FB5FA123421",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "110000.00",
+      "mileage": 25000,
+      "year": 2022,
+      "description": "S580 4Matic AMG Line, Maybach spec",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 22,
+    "fields": {
+      "model": 15,
+      "generation": 27,
+      "body_type": "Sedan",
+      "color": "Silver",
+      "vin": "WDDUG8FB5FA123422",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "55000.00",
+      "mileage": 72000,
+      "year": 2018,
+      "description": "S450 L, executive rear",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 23,
+    "fields": {
+      "model": 14,
+      "generation": 25,
+      "body_type": "Sedan",
+      "color": "Gray",
+      "vin": "WDDUG8FB5FA123423",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "48000.00",
+      "mileage": 42000,
+      "year": 2020,
+      "description": "E53 AMG 4Matic+",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 24,
+    "fields": {
+      "model": 14,
+      "generation": 25,
+      "body_type": "Wagon",
+      "color": "Black",
+      "vin": "WDDUG8FB5FA123424",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "52000.00",
+      "mileage": 38000,
+      "year": 2021,
+      "description": "E63 AMG Estate, full options",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 25,
+    "fields": {
+      "model": 13,
+      "generation": 24,
+      "body_type": "Sedan",
+      "color": "White",
+      "vin": "WDDUG8FB5FA123425",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "58000.00",
+      "mileage": 15000,
+      "year": 2023,
+      "description": "C63 AMG, inline-4 hybrid 680hp",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 26,
+    "fields": {
+      "model": 13,
+      "generation": 23,
+      "body_type": "Sedan",
+      "color": "Blue",
+      "vin": "WDDUG8FB5FA123426",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "32000.00",
+      "mileage": 68000,
+      "year": 2019,
+      "description": "C300 4Matic AMG Line",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 27,
+    "fields": {
+      "model": 17,
+      "generation": 32,
+      "body_type": "SUV",
+      "color": "Black",
+      "vin": "WDDUG8FB5FA123427",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "75000.00",
+      "mileage": 30000,
+      "year": 2022,
+      "description": "GLE 53 AMG 4Matic+",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 28,
+    "fields": {
+      "model": 28,
+      "generation": 44,
+      "body_type": "Wagon",
+      "color": "Gray",
+      "vin": "WAUZZZ4G1JN123428",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "92000.00",
+      "mileage": 28000,
+      "year": 2021,
+      "description": "RS6 Avant C8, 600hp, carbon optic",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 29,
+    "fields": {
+      "model": 28,
+      "generation": 44,
+      "body_type": "Wagon",
+      "color": "Green",
+      "vin": "WAUZZZ4G1JN123429",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "98000.00",
+      "mileage": 15000,
+      "year": 2022,
+      "description": "RS6 Avant, Sonoma Green, ABT",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 30,
+    "fields": {
+      "model": 29,
+      "generation": 45,
+      "body_type": "Sedan",
+      "color": "Red",
+      "vin": "WAUZZZ4G1JN123430",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "62000.00",
+      "mileage": 22000,
+      "year": 2022,
+      "description": "RS3 8Y, 400hp, RS torque splitter",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 31,
+    "fields": {
+      "model": 24,
+      "generation": 40,
+      "body_type": "Sedan",
+      "color": "Black",
+      "vin": "WAUZZZ4G1JN123431",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "88000.00",
+      "mileage": 35000,
+      "year": 2021,
+      "description": "A8 L 60 TFSI e, plug-in hybrid",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 32,
+    "fields": {
+      "model": 27,
+      "generation": 43,
+      "body_type": "SUV",
+      "color": "White",
+      "vin": "WAUZZZ4G1JN123432",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "65000.00",
+      "mileage": 42000,
+      "year": 2020,
+      "description": "Q7 55 TFSI e, 7 місць",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 33,
+    "fields": {
+      "model": 30,
+      "generation": 46,
+      "body_type": "Coupe",
+      "color": "Silver",
+      "vin": "WAUZZZ4G1JN123433",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "42000.00",
+      "mileage": 55000,
+      "year": 2019,
+      "description": "TT RS 400hp, magnetic ride",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 34,
+    "fields": {
+      "model": 51,
+      "generation": 71,
+      "body_type": "Coupe",
+      "color": "Silver",
+      "vin": "WP0ZZZ99ZMS123434",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "135000.00",
+      "mileage": 12000,
+      "year": 2022,
+      "description": "911 Carrera S 992, PDK",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 35,
+    "fields": {
+      "model": 51,
+      "generation": 71,
+      "body_type": "Coupe",
+      "color": "Black",
+      "vin": "WP0ZZZ99ZMS123435",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "155000.00",
+      "mileage": 8000,
+      "year": 2023,
+      "description": "911 GT3 992, touring package",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 36,
+    "fields": {
+      "model": 51,
+      "generation": 72,
+      "body_type": "Coupe",
+      "color": "White",
+      "vin": "WP0ZZZ99ZMS123436",
+      "owner_count": 3,
+      "seller": 1,
+      "price": "88000.00",
+      "mileage": 42000,
+      "year": 2017,
+      "description": "911 Turbo S 991.2",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 37,
+    "fields": {
+      "model": 52,
+      "generation": 73,
+      "body_type": "SUV",
+      "color": "Black",
+      "vin": "WP0ZZZ99ZMS123437",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "82000.00",
+      "mileage": 28000,
+      "year": 2021,
+      "description": "Cayenne GTS, sport design",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 38,
+    "fields": {
+      "model": 55,
+      "generation": 76,
+      "body_type": "Sedan",
+      "color": "Red",
+      "vin": "WP0ZZZ99ZMS123438",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "95000.00",
+      "mileage": 18000,
+      "year": 2022,
+      "description": "Taycan Turbo S, 761hp",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 39,
+    "fields": {
+      "model": 39,
+      "generation": 57,
+      "body_type": "SUV",
+      "color": "White",
+      "vin": "JT3HN86R520123439",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "38000.00",
+      "mileage": 185000,
+      "year": 2012,
+      "description": "Land Cruiser 200, бронь, повний привід",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 40,
+    "fields": {
+      "model": 39,
+      "generation": 56,
+      "body_type": "SUV",
+      "color": "Black",
+      "vin": "JT3HN86R520123440",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "82000.00",
+      "mileage": 22000,
+      "year": 2023,
+      "description": "Land Cruiser 300, GR Sport",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 41,
+    "fields": {
+      "model": 41,
+      "generation": 59,
+      "body_type": "Coupe",
+      "color": "Red",
+      "vin": "JT3HN86R520123441",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "55000.00",
+      "mileage": 28000,
+      "year": 2021,
+      "description": "GR Supra 3.0T 387hp",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 42,
+    "fields": {
+      "model": 41,
+      "generation": 59,
+      "body_type": "Coupe",
+      "color": "Gray",
+      "vin": "JT3HN86R520123442",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "62000.00",
+      "mileage": 12000,
+      "year": 2023,
+      "description": "GR Supra A91 Edition",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 43,
+    "fields": {
+      "model": 63,
+      "generation": 80,
+      "body_type": "Sedan",
+      "color": "Blue",
+      "vin": "JF1GV8LC5EG123443",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "35000.00",
+      "mileage": 62000,
+      "year": 2018,
+      "description": "WRX STI 310hp, STI sport",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 44,
+    "fields": {
+      "model": 63,
+      "generation": 80,
+      "body_type": "Sedan",
+      "color": "White",
+      "vin": "JF1GV8LC5EG123444",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "28000.00",
+      "mileage": 88000,
+      "year": 2016,
+      "description": "WRX STI, Prodrive wheels",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 45,
+    "fields": {
+      "model": 78,
+      "generation": 83,
+      "body_type": "Coupe",
+      "color": "Silver",
+      "vin": "JN1BNUR35U0123445",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "72000.00",
+      "mileage": 55000,
+      "year": 2015,
+      "description": "GT-R Premium, 565hp",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 46,
+    "fields": {
+      "model": 78,
+      "generation": 83,
+      "body_type": "Coupe",
+      "color": "Black",
+      "vin": "JN1BNUR35U0123446",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "98000.00",
+      "mileage": 28000,
+      "year": 2020,
+      "description": "GT-R Nismo, 600hp",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 47,
+    "fields": {
+      "model": 75,
+      "generation": 82,
+      "body_type": "Sedan",
+      "color": "Black",
+      "vin": "KNAE151ABHA123447",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "38000.00",
+      "mileage": 45000,
+      "year": 2021,
+      "description": "Stinger GT 3.3T AWD, 370hp",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 48,
+    "fields": {
+      "model": 75,
+      "generation": 82,
+      "body_type": "Sedan",
+      "color": "Red",
+      "vin": "KNAE151ABHA123448",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "32000.00",
+      "mileage": 68000,
+      "year": 2019,
+      "description": "Stinger GT2, Brembos",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 49,
+    "fields": {
+      "model": 80,
+      "generation": 85,
+      "body_type": "Coupe",
+      "color": "Yellow",
+      "vin": "1G1YB2D45M5123449",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "88000.00",
+      "mileage": 15000,
+      "year": 2022,
+      "description": "Corvette C8 Stingray 3LT, Z51 package",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 50,
+    "fields": {
+      "model": 80,
+      "generation": 85,
+      "body_type": "Coupe",
+      "color": "Red",
+      "vin": "1G1YB2D45M5123450",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "95000.00",
+      "mileage": 8000,
+      "year": 2023,
+      "description": "Corvette C8 Z06, 670hp, carbon aero",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 51,
+    "fields": {
+      "model": 79,
+      "generation": 84,
+      "body_type": "Coupe",
+      "color": "Black",
+      "vin": "1G1FB1RS0H0123451",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "42000.00",
+      "mileage": 38000,
+      "year": 2021,
+      "description": "Camaro SS 1LE, 455hp, track pack",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 52,
+    "fields": {
+      "model": 48,
+      "generation": 67,
+      "body_type": "Coupe",
+      "color": "Orange",
+      "vin": "1FA6P8CF5G5123452",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "38000.00",
+      "mileage": 45000,
+      "year": 2020,
+      "description": "Mustang GT500 Shelby, 760hp",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 53,
+    "fields": {
+      "model": 48,
+      "generation": 68,
+      "body_type": "Coupe",
+      "color": "Blue",
+      "vin": "1FA6P8CF5G5123453",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "52000.00",
+      "mileage": 12000,
+      "year": 2024,
+      "description": "Mustang Dark Horse 500hp",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 54,
+    "fields": {
+      "model": 53,
+      "generation": 74,
+      "body_type": "Sedan",
+      "color": "Black",
+      "vin": "WP0ZZZ97ZMS123454",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "92000.00",
+      "mileage": 32000,
+      "year": 2021,
+      "description": "Panamera Turbo S E-Hybrid, 700hp",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 55,
+    "fields": {
+      "model": 67,
+      "generation": 81,
+      "body_type": "Convertible",
+      "color": "Red",
+      "vin": "JM1NDAD74H0123455",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "32000.00",
+      "mileage": 28000,
+      "year": 2022,
+      "description": "MX-5 RF GT, 184hp, 6-speed manual",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 56,
+    "fields": {
+      "model": 90,
+      "generation": 91,
+      "body_type": "SUV",
+      "color": "Black",
+      "vin": "SALGA2FEXPA123456",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "145000.00",
+      "mileage": 8000,
+      "year": 2023,
+      "description": "Range Rover Autobiography P530, 530hp",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 57,
+    "fields": {
+      "model": 89,
+      "generation": 92,
+      "body_type": "SUV",
+      "color": "Green",
+      "vin": "SALGA2FEXPA123457",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "72000.00",
+      "mileage": 32000,
+      "year": 2022,
+      "description": "Defender 110 V8, 525hp",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 58,
+    "fields": {
+      "model": 82,
+      "generation": 87,
+      "body_type": "SUV",
+      "color": "White",
+      "vin": "YV1LZAZY3H1123458",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "58000.00",
+      "mileage": 42000,
+      "year": 2021,
+      "description": "XC90 T8 Recharge, 7 місць, B&W",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 59,
+    "fields": {
+      "model": 56,
+      "generation": 77,
+      "body_type": "Sedan",
+      "color": "Black",
+      "vin": "JTHBE1D28G2123459",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "42000.00",
+      "mileage": 38000,
+      "year": 2022,
+      "description": "IS500 F Sport, 5.0 V8, 472hp",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 60,
+    "fields": {
+      "model": 31,
+      "generation": 48,
+      "body_type": "Hatchback",
+      "color": "Gray",
+      "vin": "WVWZZZ1KZNW123460",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "45000.00",
+      "mileage": 22000,
+      "year": 2022,
+      "description": "Golf R Mk8, 320hp, Akrapovic",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 61,
+    "fields": {
+      "model": 31,
+      "generation": 47,
+      "body_type": "Hatchback",
+      "color": "Blue",
+      "vin": "WVWZZZ1KZNW123461",
+      "owner_count": 2,
+      "seller": 1,
+      "price": "28000.00",
+      "mileage": 65000,
+      "year": 2018,
+      "description": "Golf GTI Mk7.5, PP",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 62,
+    "fields": {
+      "model": 35,
+      "generation": 52,
+      "body_type": "Sedan",
+      "color": "Silver",
+      "vin": "WVWZZZ1KZNW123462",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "42000.00",
+      "mileage": 35000,
+      "year": 2021,
+      "description": "Arteon R 320hp, shooting brake",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 63,
+    "fields": {
+      "model": 19,
+      "generation": 34,
+      "body_type": "Hatchback",
+      "color": "Red",
+      "vin": "WDDUG8FB5FA123463",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "48000.00",
+      "mileage": 18000,
+      "year": 2022,
+      "description": "A45 S AMG, 421hp, drift mode",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 64,
+    "fields": {
+      "model": 21,
+      "generation": 37,
+      "body_type": "Sedan",
+      "color": "White",
+      "vin": "WAUZZZ4G1JN123464",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "38000.00",
+      "mileage": 28000,
+      "year": 2022,
+      "description": "RS3 sedan look, S3 8Y",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 65,
+    "fields": {
+      "model": 3,
+      "generation": 6,
+      "body_type": "Sedan",
+      "color": "Black",
+      "vin": "WBA8E1C5XGA123465",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "88000.00",
+      "mileage": 35000,
+      "year": 2022,
+      "description": "740i G11 M Sport, full options",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 66,
+    "fields": {
+      "model": 16,
+      "generation": 30,
+      "body_type": "SUV",
+      "color": "White",
+      "vin": "WDDUG8FB5FA123466",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "52000.00",
+      "mileage": 28000,
+      "year": 2023,
+      "description": "GLC 63 AMG S, 476hp",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 67,
+    "fields": {
+      "model": 84,
+      "generation": 88,
+      "body_type": "Wagon",
+      "color": "Gray",
+      "vin": "TMBJJ7NE5M0123467",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "32000.00",
+      "mileage": 28000,
+      "year": 2022,
+      "description": "Octavia RS iV 245hp, wagon",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 68,
+    "fields": {
+      "model": 37,
+      "generation": 54,
+      "body_type": "Sedan",
+      "color": "Black",
+      "vin": "JT3HN86R520123468",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "28000.00",
+      "mileage": 42000,
+      "year": 2021,
+      "description": "Camry 2.5 XLE, 200hp",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 69,
+    "fields": {
+      "model": 44,
+      "generation": 63,
+      "body_type": "Sedan",
+      "color": "Silver",
+      "vin": "1HGCV1F39JA123469",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "32000.00",
+      "mileage": 38000,
+      "year": 2021,
+      "description": "Accord Sport 2.0T 252hp",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.car",
+    "pk": 70,
+    "fields": {
+      "model": 71,
+      "generation": 93,
+      "body_type": "Hatchback",
+      "color": "Blue",
+      "vin": "KMHD35LE5JU123470",
+      "owner_count": 1,
+      "seller": 1,
+      "price": "22000.00",
+      "mileage": 55000,
+      "year": 2020,
+      "description": "i30 N 280hp, manual",
+      "is_active": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.pricehistory",
+    "pk": 1,
+    "fields": {
+      "car": 1,
+      "price": "92000.00",
+      "created_at": "2023-06-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.pricehistory",
+    "pk": 2,
+    "fields": {
+      "car": 1,
+      "price": "90000.00",
+      "created_at": "2023-09-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.pricehistory",
+    "pk": 3,
+    "fields": {
+      "car": 2,
+      "price": "98000.00",
+      "created_at": "2023-08-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.pricehistory",
+    "pk": 4,
+    "fields": {
+      "car": 4,
+      "price": "82000.00",
+      "created_at": "2023-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.pricehistory",
+    "pk": 5,
+    "fields": {
+      "car": 4,
+      "price": "80000.00",
+      "created_at": "2023-11-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.pricehistory",
+    "pk": 6,
+    "fields": {
+      "car": 6,
+      "price": "88000.00",
+      "created_at": "2023-05-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.pricehistory",
+    "pk": 7,
+    "fields": {
+      "car": 10,
+      "price": "110000.00",
+      "created_at": "2023-04-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.pricehistory",
+    "pk": 8,
+    "fields": {
+      "car": 28,
+      "price": "95000.00",
+      "created_at": "2023-03-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.pricehistory",
+    "pk": 9,
+    "fields": {
+      "car": 28,
+      "price": "93000.00",
+      "created_at": "2023-08-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.pricehistory",
+    "pk": 10,
+    "fields": {
+      "car": 34,
+      "price": "140000.00",
+      "created_at": "2023-06-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.pricehistory",
+    "pk": 11,
+    "fields": {
+      "car": 35,
+      "price": "160000.00",
+      "created_at": "2023-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.pricehistory",
+    "pk": 12,
+    "fields": {
+      "car": 50,
+      "price": "98000.00",
+      "created_at": "2023-09-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.pricehistory",
+    "pk": 13,
+    "fields": {
+      "car": 56,
+      "price": "150000.00",
+      "created_at": "2023-05-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "cars.generation",
+    "pk": 93,
+    "fields": {
+      "name": "PD",
+      "year_start": 2017,
+      "year_end": null,
+      "model": 71
+    }
+  }
 ]

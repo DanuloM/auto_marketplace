@@ -4,7 +4,7 @@ from .serializers import (
     GenerationSerializer,
     CarSerializer,
 )
-from .models import Manufacturer, Model, Generation, Car
+from .models import Manufacturer, Model, Generation, Car, PriceHistory
 from rest_framework import viewsets
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from users.permissions import IsAdmin
@@ -58,5 +58,16 @@ class CarViewSet(viewsets.ModelViewSet):
             return Car.objects.filter(seller=self.request.user)
         return Car.objects.filter(is_active=True)
 
-    def perform_create(self, serializer):
-        serializer.save(seller=self.request.user)
+    def perform_create(self, serializer) -> None:
+        car = serializer.save(seller=self.request.user)
+        PriceHistory.objects.create(car=car, price=car.price)
+
+    def perform_update(self, serializer) -> None:
+        old_price = serializer.instance.price
+        updated_car = serializer.save()
+        if old_price != updated_car.price:
+            PriceHistory.objects.create(
+                car=updated_car,
+                price=updated_car.price,
+            )
+        

@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Manufacturer, Model, Generation, Car
+from .models import Manufacturer, Model, Generation, Car, PriceHistory
 
 class ManufacturerSerializer(serializers.ModelSerializer):
     class Meta:
@@ -36,6 +36,12 @@ class GenerationSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'year_start', 'year_end', 'model', 'model_id']
 
 
+class PriceHistorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PriceHistory
+        fields = ['price', 'created_at']
+
+
 class CarSerializer(serializers.ModelSerializer):
     generation = serializers.CharField(read_only=True, source='generation.name')
     generation_id = serializers.PrimaryKeyRelatedField(
@@ -49,10 +55,10 @@ class CarSerializer(serializers.ModelSerializer):
         source='model',
         write_only=True
     )
-    
+    price_history = PriceHistorySerializer(many=True, read_only=True)
     class Meta:
         model = Car
-        fields = ['id', 'model', 'model_id', 'generation', 'generation_id', 'body_type', 'color', 'vin', 'owner_count', 'seller', 'price', 'mileage', 'year', 'description', 'is_active', 'created_at']
+        fields = ['id', 'model', 'model_id', 'generation', 'generation_id', 'body_type', 'color', 'vin', 'owner_count', 'seller', 'price', 'price_history','mileage', 'year', 'description', 'is_active', 'created_at']
         read_only_fields = ['id', 'seller', 'created_at']
 
 

@@ -1,5 +1,5 @@
 from django.db import models
-
+from rest_framework.exceptions import ValidationError
 from django.conf import settings
 # Create your models here.
 
@@ -68,3 +68,12 @@ class PriceHistory(models.Model):
     car = models.ForeignKey(Car, on_delete=models.CASCADE, related_name="price_history")
     price = models.DecimalField(max_digits=10, decimal_places=2)
     created_at = models.DateTimeField(auto_now_add=True)
+
+
+class CarImage(models.Model):
+    car = models.ForeignKey(Car, on_delete=models.CASCADE, related_name="images")
+    image = models.URLField()
+
+    def clean(self):
+        if CarImage.objects.filter(car=self.car).count() >= 10:
+            raise ValidationError("Максимум 10 фото на оголошення")

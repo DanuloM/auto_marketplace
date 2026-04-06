@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Manufacturer, Model, Generation, Car, PriceHistory
+from .models import Manufacturer, Model, Generation, Car, PriceHistory, CarImage
 
 class ManufacturerSerializer(serializers.ModelSerializer):
     class Meta:
@@ -42,6 +42,18 @@ class PriceHistorySerializer(serializers.ModelSerializer):
         fields = ['price', 'created_at']
 
 
+class CarImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CarImage
+        fields = ['id', 'image']
+
+    def validate(self, attrs):
+        car = attrs.get('car')
+        if CarImage.objects.filter(car=car).count() >= 10:
+            raise serializers.ValidationError("Limit 10 images per car")
+        return attrs
+
+
 class CarSerializer(serializers.ModelSerializer):
     generation = serializers.CharField(read_only=True, source='generation.name')
     generation_id = serializers.PrimaryKeyRelatedField(
@@ -56,9 +68,10 @@ class CarSerializer(serializers.ModelSerializer):
         write_only=True
     )
     price_history = PriceHistorySerializer(many=True, read_only=True)
+    images = CarImageSerializer(many=True, read_only=True)
     class Meta:
         model = Car
-        fields = ['id', 'model', 'model_id', 'generation', 'generation_id', 'body_type', 'color', 'vin', 'owner_count', 'seller', 'price', 'price_history','mileage', 'year', 'description', 'is_active', 'created_at']
+        fields = ['id', 'model', 'model_id', 'generation', 'generation_id', 'body_type', 'color', 'vin', 'owner_count', 'seller', 'price', 'price_history','mileage', 'year', 'description', 'images', 'is_active', 'created_at']
         read_only_fields = ['id', 'seller', 'created_at']
 
 

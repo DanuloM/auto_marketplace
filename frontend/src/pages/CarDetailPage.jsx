@@ -8,9 +8,11 @@ const CarDetailPage = () => {
   const [car, setCar] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(0);
 
   useEffect(() => {
     fetchCar();
+    setSelectedImage(0);
   }, [id]);
 
   const fetchCar = async () => {
@@ -62,17 +64,24 @@ const CarDetailPage = () => {
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
           </svg>
-          <span className="text-gray-900 font-medium">{car.brand || 'BMW'} {car.model}</span>
+          <span className="text-gray-900 font-medium">{car.brand || 'BMW'} {car.model} {car.generation}</span>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Image Section */}
+          {/* Image Gallery Section */}
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+            {/* Main Image */}
             <div className="h-96 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative group">
-              {car.images?.[0]?.image_url ? (
+              {car.images?.[selectedImage]?.image ? (
                 <img
-                  src={car.images[0].image_url}
-                  alt={`${car.brand} ${car.model}`}
+                  src={car.images[selectedImage].image}
+                  alt={`${car.brand || 'Car'} ${car.model || ''} - Photo ${selectedImage + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              ) : car.images?.[0]?.image ? (
+                <img
+                  src={car.images[0].image}
+                  alt={`${car.brand || 'Car'} ${car.model || ''}`}
                   className="w-full h-full object-cover"
                 />
               ) : (
@@ -83,15 +92,79 @@ const CarDetailPage = () => {
                   <p className="text-gray-500">No photos available</p>
                 </div>
               )}
+
+              {/* Image Counter */}
+              {car.images?.length > 0 && (
+                <div className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1.5 rounded-full text-sm font-medium backdrop-blur-sm">
+                  {selectedImage + 1} / {car.images.length}
+                </div>
+              )}
+
+              {/* Navigation Arrows */}
+              {car.images?.length > 1 && (
+                <>
+                  <button
+                    onClick={() => setSelectedImage(prev => prev === 0 ? car.images.length - 1 : prev - 1)}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all opacity-0 group-hover:opacity-100"
+                  >
+                    <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <button
+                    onClick={() => setSelectedImage(prev => prev === car.images.length - 1 ? 0 : prev + 1)}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all opacity-0 group-hover:opacity-100"
+                  >
+                    <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </>
+              )}
             </div>
+
+            {/* Thumbnail Gallery - up to 10 images */}
+            {car.images?.length > 1 && (
+              <div className="p-4 border-t border-gray-100">
+                <div className="flex gap-2 overflow-x-auto pb-2">
+                  {car.images.slice(0, 10).map((img, idx) => (
+                    <button
+                      key={img.id || idx}
+                      onClick={() => setSelectedImage(idx)}
+                      className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${selectedImage === idx ? 'border-blue-500 ring-2 ring-blue-200' : 'border-gray-200 hover:border-gray-300'
+                        }`}
+                    >
+                      <img
+                        src={img.image}
+                        alt={`Thumbnail ${idx + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div className="p-6">
               <div className="flex items-center justify-between">
                 <span className="text-3xl font-bold text-gray-900">${car.price?.toLocaleString() || 'N/A'}</span>
-                <button className="p-3 bg-gray-100 rounded-xl hover:bg-gray-200 transition-colors">
-                  <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </button>
+                <div className="flex items-center gap-2">
+                  {/* Location Badge */}
+                  {car.location && (
+                    <span className="flex items-center px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">
+                      <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      {car.location}
+                    </span>
+                  )}
+                  <button className="p-3 bg-gray-100 rounded-xl hover:bg-gray-200 transition-colors">
+                    <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -102,7 +175,9 @@ const CarDetailPage = () => {
             <div className="bg-white rounded-3xl shadow-xl p-8">
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h1 className="text-4xl font-bold text-gray-900 mb-2">{car.brand || 'BMW'} {car.model}</h1>
+                  <h1 className="text-4xl font-bold text-gray-900 mb-2">
+                    {car.brand || 'BMW'} {car.model} {car.generation && <span className="text-gray-500">{car.generation}</span>}
+                  </h1>
                   <p className="text-xl text-gray-600">{car.year} • {car.mileage?.toLocaleString() || '0'} km</p>
                 </div>
                 <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-2xl shadow-lg">
